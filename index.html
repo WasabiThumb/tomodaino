@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>tomodaino</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="https://github.io/WasabiThumb/tomodaino/sample.png" />
+    <meta property="og:description" content="Personality type explorer for Tomodachi Life: Living the Dream" />
+    <meta property="og:type" content="website" />
+    <meta property=”og:url” content=”https://github.io/WasabiThumb/tomodaino" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://github.io/WasabiThumb/tomodaino" />
+    <meta property="twitter:title" content="tomodaino" />
+    <meta property="twitter:description" content="Personality type explorer for Tomodachi Life: Living the Dream" />
+    <meta property="twitter:image" content="https://github.io/WasabiThumb/tomodaino/sample.png" />
+  </head>
+  <body class="bg-gray-100 text-black  dark:bg-gray-950 dark:text-gray-200 font-text flex flex-col">
+    <header class="m-6 text-center">
+      <h1 class="text-4xl font-headline">
+        <img src="/banner.svg" alt="tomodaino" class="h-16 inline-block">
+      </h1>
+      <p class="text-sm opacity-80">Personality type explorer for Tomodachi Life: Living the Dream&trade;</p>
+    </header>
+    <main class="grow relative bg-gray-200 dark:bg-gray-900">
+      <canvas id="app" class="absolute top-0 left-0 w-full h-full font-cute" width="640" height="480">
+      </canvas>
+    </main>
+    <div id="help" class="fixed left-0 top-0 w-full h-full pointer-events-none">
+      <div data-role="button" class="fixed bottom-4 right-4 cursor-pointer p-4 rounded-full pointer-events-auto bg-gray-300 dark:bg-gray-800 z-20 select-none">
+        <svg class="h-6 fill-black dark:fill-gray-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M224 224C224 171 267 128 320 128C373 128 416 171 416 224C416 266.7 388.1 302.9 349.5 315.4C321.1 324.6 288 350.7 288 392L288 416C288 433.7 302.3 448 320 448C337.7 448 352 433.7 352 416L352 392C352 390.3 352.6 387.9 355.5 384.7C358.5 381.4 363.4 378.2 369.2 376.3C433.5 355.6 480 295.3 480 224C480 135.6 408.4 64 320 64C231.6 64 160 135.6 160 224C160 241.7 174.3 256 192 256C209.7 256 224 241.7 224 224zM320 576C342.1 576 360 558.1 360 536C360 513.9 342.1 496 320 496C297.9 496 280 513.9 280 536C280 558.1 297.9 576 320 576z"/></svg>
+      </div>
+      <div data-role="window" class="fixed group left-0 top-0 w-full h-full bg-gray-100/80 dark:bg-gray-950/80 opacity-0 data-shown:pointer-events-auto data-shown:opacity-100 transition-opacity duration-200">
+        <div data-role="inner" class="right-0 top-0 h-full p-4 translate-x-full group-data-shown:translate-x-0 transition-transform duration-400 flex flex-row justify-end items-center">
+          <div data-role="content" class="text-sm bg-gray-200 text-black dark:text-gray-200 dark:bg-gray-800 p-4 rounded-xl w-128 h-10/12 overflow-y-auto">
+            <h2 class="font-headline font-bold text-xl">
+              What is this?
+            </h2>
+            <p>
+              In
+              <a href="https://en.wikipedia.org/wiki/Tomodachi_Life:_Living_the_Dream" target="_blank" class="text-cyan-600 underline">
+                Tomodachi Life: Living the Dream
+              </a>, you can create Miis with 5 varying personality traits. 4 of these traits decide, among other things,
+              the "personality type" of the Mii. This system is unintuitive and it takes a long time to try several
+              combinations in-game, so this site exists to play with the personality system in real time
+              with no restrictions!
+            </p>
+            <br>
+            <h2 class="font-headline font-bold text-xl">
+              How do I use this?
+            </h2>
+            <p>
+              This is a desktop-style web application with draggable widgets and a pannable/zoomable workspace.
+              Interact with the input widget to set the personality traits and see the resulting personality type
+              displayed in the output widget. In the future, there will be an option to add/create extra widgets
+              such as graphs.
+            </p>
+            <br>
+            <h2 class="font-headline font-bold text-xl">
+              How does this work?
+            </h2>
+            <p>
+              Honestly, I don't know! The algorithm was datamined from the game over the course of an hour
+              in the form of a 2kB lookup table. This lets the website match the game exactly, but doesn't provide
+              much insight into the underlying relationship. Here's the entire LUT as an image!
+            </p>
+            <br>
+            <img src="/lut.bmp" alt="Lookup Table" class="w-full [image-rendering:pixelated] [aspect-ratio:2/1]" loading="lazy">
+            <br>
+            <h2 class="font-headline font-bold text-xl">
+              Who made this?
+            </h2>
+            <p>
+              This was made by
+              <a href="https://github.com/WasabiThumb" target="_blank" class="text-cyan-600 underline">
+                Xavier Pedraza
+              </a>
+              with no additional contributors as of writing.
+              The code, logos and icons are open-source under the <strong>Apache-2.0 License</strong>.
+              The fonts were obtained for general use under the <strong>SIL Open Font License, Version 1.1</strong>.
+              No Nintendo assets were directly used in the making of this project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

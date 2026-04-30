@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@import "./font.css";
+
+@theme {
+  --font-headline: "Mozilla Headline", serif;
+  --font-text: "Mozilla Text", system-ui, sans-serif;
+  --font-cute: "Nunito", cursive;
+
+  --color-modal-fg-black: #022240;
+  --color-modal-fg-white: #fefefd;
+  --color-modal-bg-white: #fffaeb;
+  --color-modal-bg-yellow: #fff2cb;
+
+  --color-radio-bg-v0: #73d291;
+  --color-radio-bg-v1: #8be3a5;
+  --color-radio-bg-v2: #a9edbc;
+  --color-radio-bg-v3: #c2edcf;
+  --color-radio-bg-v4: #ffcd98;
+  --color-radio-bg-v5: #ffbe76;
+  --color-radio-bg-v6: #fdaf56;
+  --color-radio-bg-v7: #ffa238;
+  --color-radio-bg-sel: #fd5800;
+
+  --color-pc-ambitious: #1c55cd;
+  --color-pt-achiever: #bae9f1;
+  --color-pt-maverick: #cbbaf2;
+  --color-pt-rogue: #b6b8f1;
+  --color-pt-visionary: #aac9f2;
+
+  --color-pc-considerate: #f4a400;
+  --color-pt-buddy: #fee5a0;
+  --color-pt-cheerleader: #fef1a0;
+  --color-pt-daydreamer: #fed9ab;
+  --color-pt-sweetie: #feeac1;
+
+  --color-pc-outgoing: #d90d00;
+  --color-pt-charmer: #fec6cf;
+  --color-pt-dynamo: #fcb79d;
+  --color-pt-go-getter: #fcaca5;
+  --color-pt-merrymaker: #febeae;
+
+  --color-pc-reserved: #008032;
+  --color-pt-observer: #aac2ba;
+  --color-pt-perfectionist: #a4dfc1;
+  --color-pt-strategist: #c8e7a5;
+  --color-pt-thinker: #a6cea6;
+}
+
+:root {
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
