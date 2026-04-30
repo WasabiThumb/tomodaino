@@ -35,9 +35,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Build
-        run: npm ci |
-          npm run build-pages
+        run: npm run build-pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
